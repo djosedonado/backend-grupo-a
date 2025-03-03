@@ -7,7 +7,7 @@ async function bootstrap() {
   const logger = new Logger('Application');
 
   const app = await NestFactory.create(AppModule);
-
+  app.enableCors()
   const config = new DocumentBuilder()
     .setTitle('Api CRUD')
     .setVersion('1.0')
